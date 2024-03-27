@@ -12,7 +12,7 @@ const { days, hours } = diff.toObject()
 
 <template>
   <div class="container">
-    <p>See you in {{ days }} days and {{ Math.floor(hours as number) }} hours</p>
+    <p>See you in {{ days }} days and {{ Math.floor(hours as number) }} hours, my love...</p>
     <img :src="imgUrl" />
   </div>
 </template>
