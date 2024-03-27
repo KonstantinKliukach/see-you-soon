@@ -2,7 +2,7 @@
 import { DateTime } from 'luxon'
 import imgUrl from '../assets/we.jpeg'
 const dateWhenWeWillMeetAgain = DateTime.fromObject(
-  { day: 23, month: 5, hours: 8 },
+  { day: 23, month: 5, hour: 8 },
   { zone: 'Europe/Athens' }
 )
 const dateNow = DateTime.fromObject({}, { zone: 'Europe/Athens' })
@@ -12,7 +12,7 @@ const { days, hours } = diff.toObject()
 
 <template>
   <div class="container">
-    <p>See you in {{ days }} days and {{ Math.floor(hours) }} hours</p>
+    <p>See you in {{ days }} days and {{ Math.floor(hours as number) }} hours</p>
     <img :src="imgUrl" />
   </div>
 </template>
