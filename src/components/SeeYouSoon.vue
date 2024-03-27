@@ -12,7 +12,9 @@ const { days, hours } = diff.toObject()
 
 <template>
   <div class="container">
-    <p>See you in {{ days }} days and {{ Math.floor(hours as number) }} hours, my love...</p>
+    <p class="text">
+      See you in {{ days }} days and {{ Math.floor(hours as number) }} hours, my love...
+    </p>
     <img :src="imgUrl" />
   </div>
 </template>
@@ -23,16 +25,27 @@ const { days, hours } = diff.toObject()
   flex-direction: column;
   align-items: center;
   gap: 4rem;
+  padding: 0 1em;
+}
+
+.text {
+  text-align: center;
 }
 
 img {
-  width: 400px;
+  width: 300px;
   aspect-ratio: 1;
   --_m: radial-gradient(#000 69%, #0000 70%) 84.5%/50%;
   -webkit-mask-box-image: var(--_m);
   mask-border: var(--_m);
   clip-path: polygon(-42% 0, 50% 91%, 142% 0);
   object-fit: cover;
+}
+
+@media (min-width: 1024px) {
+  img {
+    width: 400px;
+  }
 }
 
 /* fallback until better support for mask-border */
