@@ -2,7 +2,7 @@
 import { DateTime } from 'luxon'
 import imgUrl from '../assets/we.jpeg'
 const dateWhenWeWillMeetAgain = DateTime.fromObject(
-  { day: 23, month: 5, hour: 8 },
+  { day: 24, month: 5, hour: 8 },
   { zone: 'Europe/Athens' }
 )
 const dateNow = DateTime.fromObject({}, { zone: 'Europe/Athens' })
